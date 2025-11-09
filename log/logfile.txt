@@ -1,0 +1,112 @@
+PID:1 - 2025-11-08 10:42:50,347 - INFO - Starting download
+PID:1 - 2025-11-08 10:42:51,075 - INFO - Downloaded successfully
+PID:2 - 2025-11-08 10:42:57,982 - INFO - Loading dataset
+PID:2 - 2025-11-08 10:42:58,082 - INFO - Split completed
+PID:2 - 2025-11-08 10:42:58,218 - INFO - Train/Test files saved successfully
+PID:3 - 2025-11-08 10:43:05,202 - INFO - Loading data from Data/Instruments_Reviews.csv
+PID:3 - 2025-11-08 10:43:05,266 - INFO - Generating sentiment labels
+PID:3 - 2025-11-08 10:43:05,266 - INFO - Combining text fields
+PID:3 - 2025-11-08 10:43:05,288 - INFO - Parsing helpfulness ratio and review length
+PID:3 - 2025-11-08 10:43:05,666 - INFO - Preprocessing complete. Saved to Data/processed_data/cleaned_reviews.csv
+PID:4 - 2025-11-08 10:43:14,955 - INFO - Reading cleaned data from Data/Processed_data/cleaned_reviews.csv
+PID:4 - 2025-11-08 10:43:15,094 - INFO - Splitting data into train/test
+PID:4 - 2025-11-08 10:43:15,110 - INFO - Building TF-IDF features
+PID:4 - 2025-11-08 10:43:17,032 - INFO - Adding numeric features
+PID:4 - 2025-11-08 10:43:17,053 - INFO - Saving feature matrices and vectorizer
+PID:4 - 2025-11-08 10:43:17,711 - INFO - Feature engineering complete
+PID:5 - 2025-11-08 10:45:27,487 - INFO - Loading feature data
+PID:5 - 2025-11-08 10:45:27,592 - INFO - Training Logistic Regression model
+PID:5 - 2025-11-08 10:48:38,367 - INFO - Model evaluation: Accuracy=0.8811, F1-macro=0.6142
+PID:5 - 2025-11-08 10:48:38,383 - INFO - 
+              precision    recall  f1-score   support
+
+    negative       0.55      0.48      0.51        93
+     neutral       0.37      0.40      0.39       155
+    positive       0.94      0.94      0.94      1805
+
+    accuracy                           0.88      2053
+   macro avg       0.62      0.61      0.61      2053
+weighted avg       0.88      0.88      0.88      2053
+
+PID:5 - 2025-11-08 10:48:38,383 - INFO - Model saved successfully
+PID:6 - 2025-11-08 10:48:54,453 - INFO - Loading model and vectorizer
+PID:6 - 2025-11-08 10:48:55,407 - INFO - Prediction complete: positive
+PID:7 - 2025-11-08 10:58:54,374 - INFO - Data ingestion Process Stated
+PID:7 - 2025-11-08 10:58:54,374 - INFO - Starting download
+PID:7 - 2025-11-08 10:58:55,109 - INFO - Downloaded successfully
+PID:7 - 2025-11-08 10:58:55,109 - INFO - Data ingestion Process Ended
+PID:8 - 2025-11-08 10:59:14,965 - INFO - Data Spliter Process Stated
+PID:8 - 2025-11-08 10:59:14,965 - INFO - Loading dataset
+PID:8 - 2025-11-08 10:59:15,067 - INFO - Split completed
+PID:8 - 2025-11-08 10:59:15,189 - INFO - Train/Test files saved successfully
+PID:8 - 2025-11-08 10:59:15,189 - INFO - Data Spliter Process Ended
+PID:9 - 2025-11-08 10:59:32,321 - INFO - Data Preprocessing Process Started
+PID:9 - 2025-11-08 10:59:32,321 - INFO - Loading data from Data/Instruments_Reviews.csv
+PID:9 - 2025-11-08 10:59:32,392 - INFO - Generating sentiment labels
+PID:9 - 2025-11-08 10:59:32,392 - INFO - Combining text fields
+PID:9 - 2025-11-08 10:59:32,416 - INFO - Parsing helpfulness ratio and review length
+PID:9 - 2025-11-08 10:59:32,738 - INFO - Saved proceed data to Data/processed_data/cleaned_reviews.csv
+PID:9 - 2025-11-08 10:59:32,738 - INFO - Data Preprocessing Process Ended
+PID:10 - 2025-11-08 10:59:57,625 - INFO - Feature Engineering Process Started
+PID:10 - 2025-11-08 10:59:57,625 - INFO - Reading cleaned data from Data/Processed_data/cleaned_reviews.csv
+PID:10 - 2025-11-08 10:59:57,814 - INFO - Splitting data into train/test
+PID:10 - 2025-11-08 10:59:57,820 - INFO - Building TF-IDF features
+PID:10 - 2025-11-08 11:00:00,140 - INFO - Adding numeric features
+PID:10 - 2025-11-08 11:00:00,172 - INFO - Saving feature matrices and vectorizer
+PID:10 - 2025-11-08 11:00:00,764 - INFO - Feature Engineering Process Ended
+PID:11 - 2025-11-08 11:00:30,601 - INFO - Model Building Process Started
+PID:11 - 2025-11-08 11:00:30,601 - INFO - Loading feature data
+PID:11 - 2025-11-08 11:00:30,672 - INFO - Training Logistic Regression model
+PID:11 - 2025-11-08 11:03:53,926 - INFO - Model evaluation: Accuracy=0.8811, F1-macro=0.6142
+PID:11 - 2025-11-08 11:03:53,964 - INFO - 
+              precision    recall  f1-score   support
+
+    negative       0.55      0.48      0.51        93
+     neutral       0.37      0.40      0.39       155
+    positive       0.94      0.94      0.94      1805
+
+    accuracy                           0.88      2053
+   macro avg       0.62      0.61      0.61      2053
+weighted avg       0.88      0.88      0.88      2053
+
+PID:11 - 2025-11-08 11:03:53,964 - INFO - Model saved successfully
+PID:11 - 2025-11-08 11:03:53,964 - INFO - Model Building Process Ended
+PID:12 - 2025-11-08 11:04:47,885 - INFO - Prediction Process Started
+PID:12 - 2025-11-08 11:04:47,885 - INFO - Loading model and vectorizer
+PID:12 - 2025-11-08 11:04:48,933 - INFO - Prediction complete: positive
+PID:12 - 2025-11-08 11:04:49,885 - INFO - Prediction Process Ended
+PID:13 - 2025-11-09 19:56:37,350 - INFO - Data ingestion Process Stated
+PID:13 - 2025-11-09 19:56:37,371 - INFO - Starting download
+PID:13 - 2025-11-09 19:56:38,952 - INFO - Downloaded successfully
+PID:13 - 2025-11-09 19:56:38,952 - INFO - Data ingestion Process Ended
+PID:14 - 2025-11-09 19:58:34,022 - INFO - Data Preprocessing Process Started
+PID:14 - 2025-11-09 19:58:34,022 - INFO - Loading data from data/row/Instruments_Reviews.csv
+PID:14 - 2025-11-09 19:58:34,130 - INFO - Generating sentiment labels
+PID:14 - 2025-11-09 19:58:34,130 - INFO - Combining text fields
+PID:14 - 2025-11-09 19:58:34,162 - INFO - Parsing helpfulness ratio and review length
+PID:14 - 2025-11-09 19:58:34,509 - INFO - Saved proceed data to data/processed_data/cleaned_reviews.csv
+PID:14 - 2025-11-09 19:58:34,509 - INFO - Data Preprocessing Process Ended
+PID:15 - 2025-11-09 20:13:59,015 - INFO - Feature Engineering Process Started
+PID:15 - 2025-11-09 20:13:59,113 - INFO - Reading cleaned data from data/Processed_data/cleaned_reviews.csv
+PID:15 - 2025-11-09 20:13:59,272 - INFO - Splitting data into train/test
+PID:15 - 2025-11-09 20:13:59,295 - INFO - Building TF-IDF features
+PID:15 - 2025-11-09 20:14:01,508 - INFO - Adding numeric features
+PID:15 - 2025-11-09 20:14:01,540 - INFO - Saving feature matrices and vectorizer
+PID:15 - 2025-11-09 20:14:02,309 - INFO - Feature Engineering Process Ended
+PID:16 - 2025-11-09 20:15:16,289 - INFO - Model Building Process Started
+PID:16 - 2025-11-09 20:15:16,289 - INFO - Loading feature data
+PID:16 - 2025-11-09 20:15:16,391 - INFO - Training Logistic Regression model
+PID:16 - 2025-11-09 20:23:22,825 - INFO - Model evaluation: Accuracy=0.8811, F1-macro=0.6142
+PID:16 - 2025-11-09 20:23:22,889 - INFO - 
+              precision    recall  f1-score   support
+
+    negative       0.55      0.48      0.51        93
+     neutral       0.37      0.40      0.39       155
+    positive       0.94      0.94      0.94      1805
+
+    accuracy                           0.88      2053
+   macro avg       0.62      0.61      0.61      2053
+weighted avg       0.88      0.88      0.88      2053
+
+PID:16 - 2025-11-09 20:23:22,900 - INFO - Model saved successfully
+PID:16 - 2025-11-09 20:23:22,900 - INFO - Model Building Process Ended

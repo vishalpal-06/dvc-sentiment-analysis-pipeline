@@ -1,0 +1,26 @@
+data_ingestion:
+  url: "https://raw.githubusercontent.com/RichardRivaldo/Sentiment-Analysis/refs/heads/main/Instruments_Reviews.csv"
+
+data_preprocessing:
+  remove_duplicates: true
+  lowercase: true
+  remove_special_chars: true
+  remove_stopwords: true
+  min_review_length: 5
+
+feature_engineering:
+  vectorizer_params:
+    test_size: 0.3
+    random_state: 30
+    max_features: 40000
+    ngram_range: [1, 2]
+    min_df: 3
+
+model_building:
+  model_params:
+    model_type: "logistic_regression"
+    C: 1.0
+    max_iter: 250
+    random_state: 30
+    test_size: 0.2
+    metric: "accuracy"

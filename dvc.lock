@@ -1,0 +1,113 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 75739a1003de614b6238a9f9038d283e
+      size: 920
+    params:
+      params.yaml:
+        data_ingestion.url: 
+          https://raw.githubusercontent.com/RichardRivaldo/Sentiment-Analysis/refs/heads/main/Instruments_Reviews.csv
+    outs:
+    - path: data/row/Instruments_Reviews.csv
+      hash: md5
+      md5: 49f2bd8636808cd639bb730aab06655b
+      size: 6081961
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: data/row/Instruments_Reviews.csv
+      hash: md5
+      md5: 49f2bd8636808cd639bb730aab06655b
+      size: 6081961
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 80e337399c745fb411d2f6d2b9ca9a9f
+      size: 1697
+    outs:
+    - path: data/processed_data/cleaned_reviews.csv
+      hash: md5
+      md5: 057b4c89477da79c30fdf25d235f36b7
+      size: 11548787
+  feature_engineering:
+    cmd: python src/feature_engineering.py
+    deps:
+    - path: data/processed_data/cleaned_reviews.csv
+      hash: md5
+      md5: 057b4c89477da79c30fdf25d235f36b7
+      size: 11548787
+    - path: src/feature_engineering.py
+      hash: md5
+      md5: a3f856528417b46b1b661a2a08af31b8
+      size: 2636
+    params:
+      params.yaml:
+        feature_engineering.vectorizer_params:
+          test_size: 0.2
+          random_state: 42
+          max_features: 50000
+          ngram_range:
+          - 1
+          - 2
+          min_df: 3
+    outs:
+    - path: artifacts/X_test.joblib
+      hash: md5
+      md5: 7bc2da822eefa4e35eed8ce12dd0d315
+      size: 3750892
+    - path: artifacts/X_train.joblib
+      hash: md5
+      md5: 0818fe56097a096f16069384c8ed5c01
+      size: 15261036
+    - path: artifacts/vectorizer.joblib
+      hash: md5
+      md5: ff42185e2e8f268827af9c772cf48345
+      size: 1810320
+    - path: artifacts/y_test.joblib
+      hash: md5
+      md5: 87f7bc724efe5bb7d72fea4eca8581fb
+      size: 42356
+    - path: artifacts/y_train.joblib
+      hash: md5
+      md5: a9f4d7ce36587eff56aa29bf7d14df71
+      size: 165486
+  model_building:
+    cmd: python src/model_building.py
+    deps:
+    - path: artifacts/X_test.joblib
+      hash: md5
+      md5: 7bc2da822eefa4e35eed8ce12dd0d315
+      size: 3750892
+    - path: artifacts/X_train.joblib
+      hash: md5
+      md5: 0818fe56097a096f16069384c8ed5c01
+      size: 15261036
+    - path: artifacts/y_test.joblib
+      hash: md5
+      md5: 87f7bc724efe5bb7d72fea4eca8581fb
+      size: 42356
+    - path: artifacts/y_train.joblib
+      hash: md5
+      md5: a9f4d7ce36587eff56aa29bf7d14df71
+      size: 165486
+    - path: src/model_building.py
+      hash: md5
+      md5: 8e6782f247b97edaff5ad69ae72f8995
+      size: 1461
+    params:
+      params.yaml:
+        model_building.model_params:
+          model_type: logistic_regression
+          C: 1.0
+          max_iter: 300
+          random_state: 42
+          test_size: 0.2
+          metric: accuracy
+    outs:
+    - path: artifacts/sentiment_model.joblib
+      hash: md5
+      md5: eef0fbafdb7b56af47916466d71938eb
+      size: 1104511
