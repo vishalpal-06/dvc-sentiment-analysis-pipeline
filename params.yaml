@@ -18,9 +18,8 @@ feature_engineering:
 
 model_building:
   model_params:
-    model_type: "logistic_regression"
-    C: 1.0
-    max_iter: 250
+    C: 2.0
+    max_iter: 10000
     random_state: 30
     test_size: 0.2
-    metric: "accuracy"
+    class_weight: "balanced"

@@ -110,3 +110,36 @@ weighted avg       0.88      0.88      0.88      2053
 
 PID:16 - 2025-11-09 20:23:22,900 - INFO - Model saved successfully
 PID:16 - 2025-11-09 20:23:22,900 - INFO - Model Building Process Ended
+PID:17 - 2025-11-09 20:52:41,287 - INFO - Data Preprocessing Process Started
+PID:17 - 2025-11-09 20:52:41,287 - INFO - Loading data from data/row/Instruments_Reviews.csv
+PID:17 - 2025-11-09 20:52:41,401 - INFO - Generating sentiment labels
+PID:17 - 2025-11-09 20:52:41,401 - INFO - Combining text fields
+PID:17 - 2025-11-09 20:52:41,440 - INFO - Parsing helpfulness ratio and review length
+PID:17 - 2025-11-09 20:52:41,803 - INFO - Saved proceed data to data/processed_data/cleaned_reviews.csv
+PID:17 - 2025-11-09 20:52:41,803 - INFO - Data Preprocessing Process Ended
+PID:18 - 2025-11-09 20:52:45,077 - INFO - Feature Engineering Process Started
+PID:18 - 2025-11-09 20:52:45,077 - INFO - Reading cleaned data from data/Processed_data/cleaned_reviews.csv
+PID:18 - 2025-11-09 20:52:45,226 - INFO - Splitting data into train/test
+PID:18 - 2025-11-09 20:52:45,242 - INFO - Building TF-IDF features
+PID:18 - 2025-11-09 20:52:47,377 - INFO - Adding numeric features
+PID:18 - 2025-11-09 20:52:47,393 - INFO - Saving feature matrices and vectorizer
+PID:18 - 2025-11-09 20:52:48,004 - INFO - Feature Engineering Process Ended
+PID:19 - 2025-11-09 20:52:51,832 - INFO - Model Building Process Started
+PID:19 - 2025-11-09 20:55:27,066 - INFO - Model Building Process Started
+PID:19 - 2025-11-09 21:10:50,983 - INFO - Model Building Process Started
+PID:19 - 2025-11-09 21:10:51,094 - INFO - Loading feature data
+PID:19 - 2025-11-09 21:10:51,464 - INFO - Training Logistic Regression model
+PID:19 - 2025-11-09 21:13:25,652 - INFO - Model evaluation: Accuracy=0.8802, F1-macro=0.6004
+PID:19 - 2025-11-09 21:13:25,668 - INFO - 
+              precision    recall  f1-score   support
+
+   negative        0.61      0.41      0.49       140
+    neutral        0.36      0.37      0.37       232
+   positive        0.93      0.95      0.94      2707
+
+    accuracy                           0.88      3079
+   macro avg       0.64      0.58      0.60      3079
+weighted avg       0.88      0.88      0.88      3079
+
+PID:19 - 2025-11-09 21:13:26,012 - INFO - Model saved successfully
+PID:19 - 2025-11-09 21:13:26,014 - INFO - Model Building Process Ended

@@ -3,10 +3,19 @@ import joblib
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score, f1_score
 from logger_utils import setup_logger, update_process_id, logging
+import yaml
 
 config, pid = setup_logger()
 
 logging.info("Model Building Process Started")
+
+with open("params.yaml", "r") as f:
+    params = yaml.safe_load(f)
+
+max_iter = params["model_building"]["model_params"]["max_iter"]
+C = params["model_building"]["model_params"]["C"]
+class_weight = params["model_building"]["model_params"]["class_weight"]
+
 
 def train():
     try:
@@ -17,7 +26,7 @@ def train():
         y_test  = joblib.load("artifacts/y_test.joblib")
 
         logging.info("Training Logistic Regression model")
-        model = LogisticRegression(max_iter=10000, C=2.0, class_weight="balanced")
+        model = LogisticRegression(max_iter=max_iter, C=C, class_weight=class_weight)
         model.fit(X_train, y_train)
 
         preds = model.predict(X_test)
