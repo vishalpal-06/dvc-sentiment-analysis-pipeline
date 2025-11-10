@@ -1,13 +1,6 @@
 data_ingestion:
   url: "https://raw.githubusercontent.com/RichardRivaldo/Sentiment-Analysis/refs/heads/main/Instruments_Reviews.csv"
 
-data_preprocessing:
-  remove_duplicates: true
-  lowercase: true
-  remove_special_chars: true
-  remove_stopwords: true
-  min_review_length: 8
-
 feature_engineering:
   vectorizer_params:
     test_size: 0.3
