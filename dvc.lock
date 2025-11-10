@@ -46,7 +46,7 @@ stages:
     params:
       params.yaml:
         feature_engineering.vectorizer_params:
-          test_size: 0.3
+          test_size: 0.2
           random_state: 40
           max_features: 20000
           ngram_range:
@@ -56,43 +56,43 @@ stages:
     outs:
     - path: artifacts/X_test.joblib
       hash: md5
-      md5: 64430b03c154d766ad95c0d0355a6be8
-      size: 4992940
+      md5: e472590ad67410b295e6700e4db4c471
+      size: 3360556
     - path: artifacts/X_train.joblib
       hash: md5
-      md5: b2169cccf179aabaa03dba5cc5999349
-      size: 12060452
+      md5: 55b9924d811439c7c9ecbe71cd693826
+      size: 13719500
     - path: artifacts/vectorizer.joblib
       hash: md5
-      md5: 1dac4d4e33531ee3df247d361dcf0a2e
-      size: 773904
+      md5: 32913017901d70cad40cf4912944335b
+      size: 773711
     - path: artifacts/y_test.joblib
       hash: md5
-      md5: 24dd7803b5ffde6e3cf38bcbd076619b
-      size: 62771
+      md5: 691c2af7dcffe756531f23bd8343e643
+      size: 42253
     - path: artifacts/y_train.joblib
       hash: md5
-      md5: d4550d48618ff6e0447816393b13ee90
-      size: 144849
+      md5: 4bb37fc9d615734af88c4a374dc669b7
+      size: 165367
   model_building:
     cmd: python src/model_building.py
     deps:
     - path: artifacts/X_test.joblib
       hash: md5
-      md5: 64430b03c154d766ad95c0d0355a6be8
-      size: 4992940
+      md5: e472590ad67410b295e6700e4db4c471
+      size: 3360556
     - path: artifacts/X_train.joblib
       hash: md5
-      md5: b2169cccf179aabaa03dba5cc5999349
-      size: 12060452
+      md5: 55b9924d811439c7c9ecbe71cd693826
+      size: 13719500
     - path: artifacts/y_test.joblib
       hash: md5
-      md5: 24dd7803b5ffde6e3cf38bcbd076619b
-      size: 62771
+      md5: 691c2af7dcffe756531f23bd8343e643
+      size: 42253
     - path: artifacts/y_train.joblib
       hash: md5
-      md5: d4550d48618ff6e0447816393b13ee90
-      size: 144849
+      md5: 4bb37fc9d615734af88c4a374dc669b7
+      size: 165367
     - path: src/model_building.py
       hash: md5
       md5: b80d378a681e2441a9246ea421bedd21
@@ -101,12 +101,12 @@ stages:
       params.yaml:
         model_building.model_params:
           C: 2.0
-          max_iter: 10000
-          random_state: 40
-          test_size: 0.2
+          max_iter: 1000
+          random_state: 45
+          test_size: 0.3
           class_weight: balanced
     outs:
     - path: artifacts/sentiment_model.joblib
       hash: md5
-      md5: fd153dde64f6ad2e869c3cf59eb4f881
+      md5: 5e57c64d8d64947fd5dfb85328637d15
       size: 481103
