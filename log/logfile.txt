@@ -178,3 +178,27 @@ weighted avg       0.88      0.88      0.88      3079
 
 PID:23 - 2025-11-10 10:47:57,610 - INFO - Model saved successfully
 PID:23 - 2025-11-10 10:47:57,619 - INFO - Model Building Process Ended
+PID:24 - 2025-11-10 11:04:38,962 - INFO - Feature Engineering Process Started
+PID:24 - 2025-11-10 11:04:38,967 - INFO - Reading cleaned data from data/Processed_data/cleaned_reviews.csv
+PID:24 - 2025-11-10 11:04:39,146 - INFO - Splitting data into train/test
+PID:24 - 2025-11-10 11:04:39,159 - INFO - Building TF-IDF features
+PID:24 - 2025-11-10 11:04:41,973 - INFO - Adding numeric features
+PID:24 - 2025-11-10 11:04:42,015 - INFO - Saving feature matrices and vectorizer
+PID:24 - 2025-11-10 11:04:42,521 - INFO - Feature Engineering Process Ended
+PID:25 - 2025-11-10 11:04:58,279 - INFO - Model Building Process Started
+PID:25 - 2025-11-10 11:04:58,279 - INFO - Loading feature data
+PID:25 - 2025-11-10 11:04:58,313 - INFO - Training Logistic Regression model
+PID:25 - 2025-11-10 11:08:18,744 - INFO - Model evaluation: Accuracy=0.8681, F1-macro=0.6010
+PID:25 - 2025-11-10 11:08:18,758 - INFO - 
+              precision    recall  f1-score   support
+
+   negative        0.51      0.44      0.48       140
+    neutral        0.36      0.44      0.39       232
+   positive        0.94      0.93      0.93      2707
+
+    accuracy                           0.87      3079
+   macro avg       0.60      0.60      0.60      3079
+weighted avg       0.88      0.87      0.87      3079
+
+PID:25 - 2025-11-10 11:08:18,770 - INFO - Model saved successfully
+PID:25 - 2025-11-10 11:08:18,770 - INFO - Model Building Process Ended

@@ -6,13 +6,13 @@ data_preprocessing:
   lowercase: true
   remove_special_chars: true
   remove_stopwords: true
-  min_review_length: 5
+  min_review_length: 8
 
 feature_engineering:
   vectorizer_params:
     test_size: 0.3
-    random_state: 30
-    max_features: 40000
+    random_state: 40
+    max_features: 20000
     ngram_range: [1, 2]
     min_df: 3
 
@@ -20,6 +20,6 @@ model_building:
   model_params:
     C: 2.0
     max_iter: 10000
-    random_state: 30
+    random_state: 40
     test_size: 0.2
     class_weight: "balanced"
