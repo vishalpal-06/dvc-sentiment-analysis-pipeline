@@ -4,7 +4,6 @@ import yaml
 
 config, pid = setup_logger()
 logging.info("Data ingestion Process Stated")
-# url = "https://raw.githubusercontent.com/RichardRivaldo/Sentiment-Analysis/refs/heads/main/Instruments_Reviews.csv"
 
 with open("params.yaml", "r") as f:
     params = yaml.safe_load(f)

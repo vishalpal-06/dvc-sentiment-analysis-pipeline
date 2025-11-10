@@ -5,8 +5,8 @@ stages:
     deps:
     - path: src/data_ingestion.py
       hash: md5
-      md5: 75739a1003de614b6238a9f9038d283e
-      size: 920
+      md5: 03992e807e2bdc7694f7e421249a9147
+      size: 801
     params:
       params.yaml:
         data_ingestion.url: 
@@ -56,43 +56,43 @@ stages:
     outs:
     - path: artifacts/X_test.joblib
       hash: md5
-      md5: 7ba34a7fd364e672ae65fde6515fea75
-      size: 5369292
+      md5: fcac3de5a271c4ea55234533ffd42f4e
+      size: 5369828
     - path: artifacts/X_train.joblib
       hash: md5
-      md5: d6ac6cfe6ee53400e223d9a14f54e505
+      md5: faae2dfa76f7d3158f305a902d13b9c2
       size: 13277028
     - path: artifacts/vectorizer.joblib
       hash: md5
-      md5: c227870d9924f7694aa1a6734beae0c4
-      size: 1571739
+      md5: a1b01fdcad914ae4be0564a91076a54f
+      size: 1571695
     - path: artifacts/y_test.joblib
       hash: md5
-      md5: 3ccc4568f0c833ba489e947430acb749
-      size: 62893
+      md5: 87e548c97a8c3252cfe6c50fa53531e7
+      size: 62771
     - path: artifacts/y_train.joblib
       hash: md5
-      md5: 385829c892e2f492a0fe4ca6c27e7638
-      size: 144971
+      md5: 780b696adef201776b7f08c4c399b0e1
+      size: 144849
   model_building:
     cmd: python src/model_building.py
     deps:
     - path: artifacts/X_test.joblib
       hash: md5
-      md5: 7ba34a7fd364e672ae65fde6515fea75
-      size: 5369292
+      md5: fcac3de5a271c4ea55234533ffd42f4e
+      size: 5369828
     - path: artifacts/X_train.joblib
       hash: md5
-      md5: d6ac6cfe6ee53400e223d9a14f54e505
+      md5: faae2dfa76f7d3158f305a902d13b9c2
       size: 13277028
     - path: artifacts/y_test.joblib
       hash: md5
-      md5: 3ccc4568f0c833ba489e947430acb749
-      size: 62893
+      md5: 87e548c97a8c3252cfe6c50fa53531e7
+      size: 62771
     - path: artifacts/y_train.joblib
       hash: md5
-      md5: 385829c892e2f492a0fe4ca6c27e7638
-      size: 144971
+      md5: 780b696adef201776b7f08c4c399b0e1
+      size: 144849
     - path: src/model_building.py
       hash: md5
       md5: b80d378a681e2441a9246ea421bedd21
@@ -108,5 +108,5 @@ stages:
     outs:
     - path: artifacts/sentiment_model.joblib
       hash: md5
-      md5: fdc14ac85040816e9e4073e93d80cd2b
-      size: 961167
+      md5: 5002f7a957e0531c086e4ab003a54543
+      size: 961103
